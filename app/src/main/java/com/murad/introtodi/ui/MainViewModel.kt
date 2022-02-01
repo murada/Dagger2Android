@@ -6,17 +6,17 @@ import com.murad.introtodi.data.remote.NetworkService
 
 class MainViewModel {
 
-    private var databaseService:DatabaseService? = null
-    private var networkService:NetworkService? = null
+    private var databaseService: DatabaseService? = null
+    private var networkService: NetworkService? = null
 
-    constructor(context: Context){
-        databaseService = DatabaseService(context)
-        networkService = NetworkService(context)
+    constructor(databaseService: DatabaseService?, networkService: NetworkService?) {
+        this.databaseService = databaseService
+        this.networkService = networkService
     }
 
 
-    fun getData():String{
-        return databaseService!!.getDummyData()+" : " + networkService!!.getDummyData()
+    fun getData(): String {
+        return databaseService!!.getDummyData() + " : " + networkService!!.getDummyData()
     }
 
 

@@ -4,15 +4,13 @@ import android.content.Context
 
 class DatabaseService {
 
-    private var context: Context? = null
     private var databaseName: String? = null
     private var version = 0
 
-    constructor(context: Context?) {
+    constructor(databaseName : String , version:Int) {
         // do the initialisation here
-        this.context = context
-        databaseName = "dummy_db"
-        version = 1
+        this.databaseName = databaseName
+        this.version = version
     }
 
     fun getDummyData(): String? {

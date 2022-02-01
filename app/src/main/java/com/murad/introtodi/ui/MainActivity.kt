@@ -2,6 +2,7 @@ package com.murad.introtodi.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.murad.introtodi.IntroDIApp
 import com.murad.introtodi.R
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel = MainViewModel(this)
+        var app = this.application as IntroDIApp
+        viewModel = MainViewModel(app.databaseService , app.networkService)
 
 
 

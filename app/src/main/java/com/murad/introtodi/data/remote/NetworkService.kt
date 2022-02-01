@@ -4,12 +4,10 @@ import android.content.Context
 
 class NetworkService {
 
-    private var context: Context? = null
     private var apiKey: String? = null
 
-    constructor(context: Context){
-        this.context = context
-        apiKey = "YES"
+    constructor(apiKey:String){
+        this.apiKey = apiKey
     }
 
     fun getDummyData():String{
