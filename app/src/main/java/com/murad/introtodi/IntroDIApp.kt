@@ -1,6 +1,7 @@
 package com.murad.introtodi
 
 import android.app.Application
+import com.murad.introtodi.DI.Injector
 import com.murad.introtodi.data.local.DatabaseService
 import com.murad.introtodi.data.remote.NetworkService
 
@@ -11,7 +12,6 @@ class IntroDIApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        this.databaseService = DatabaseService("database",2)
-        this.networkService = NetworkService("APIKEY")
+        Injector.inject(this)
     }
 }
