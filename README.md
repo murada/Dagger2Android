@@ -35,6 +35,8 @@ Project is created with:
 
 ### FIRST STEP:
 
+[commit](https://github.com/murada/introToDI/commit/fbd3ebc1fcc0c6d5d96918872dce3e07291dfe37)
+
 in first commit you will find the old way . ( when i need object I WILL CREATE IT ). so the
 viewmodel will create new instances from network service and database service. and the main activity
 will create instance from viewmodel.
@@ -43,12 +45,16 @@ will create instance from viewmodel.
 
 ### SECOND STEP:
 
+[commit](https://github.com/murada/introToDI/commit/2a0632c0bd7118a829516b233b1620054f00525c)
+
 we moved the creation of the instances (services) outside the viewmodel and we passes the Conf
 values of the service from outside each service, so now the code is more configurable and testable.!
 
 --------------------------------------
 
 ### THIRD STEP:
+
+[commit](https://github.com/murada/introToDI/commit/dd417811abf533e522715641d894d33f757f18a2)
 
 we created new singleton class(object) -- Injector -- to manage our dependencies, this is the first step
 to start digging in the dagger and DI libraries world.
