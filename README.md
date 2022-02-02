@@ -18,10 +18,10 @@ Every Commit will be contains a step in how to create instances and provide thos
 
 this is a clean example to DI and will be guide to Dagger2 in android.(KOTLIN)
 
-1- Network Service. needs (apiKey , context)
-2- Database Service. needs (context , database name , version)
-3- MainView Model. needs ( network service , database service)
-4- MainActivity. needs ( viewmodel )
+- Network Service. needs (apiKey , context)
+- Database Service. needs (context , database name , version)
+- MainView Model. needs ( network service , database service)
+- MainActivity. needs ( viewmodel )
 
 --------------------------------------
 
