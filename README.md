@@ -70,6 +70,7 @@ Dagger Main Architecture:
 * Component(Dependency Manager a class will inject the consumers with their dependencies)
 * Consumer (Classes has dependencies -they have fields from another classes-)
 * Scope (The Dependency lifetime)
+* Qualifier( if we had 2 provides method with same return type we need to distinguish between them using qualifier (Annotations)).
 
 Main Annotations:
 
@@ -77,10 +78,17 @@ Main Annotations:
 * @Component
 * @Provides
 * @Inject
+* @Qualifier
 
 In the first commit we removed the inject(for the application) method from the injector class and we used the dagger2 to inject the services 
 into the application.
 
 We created Application module(@Module) that will provide 2 (@Singleton) services (Network , Database).
+
+In the second commit we removed the Injector object and we used dagger2 to inject the viewmodel in the main activity.
+(Note : we added dependency in the activity component because the view model needs (network and database)services and they already been provided
+from application module).
+
+in the first and second commit we used (Field Injection). next we will use Constructor injection.
 
 ----------------------------------------

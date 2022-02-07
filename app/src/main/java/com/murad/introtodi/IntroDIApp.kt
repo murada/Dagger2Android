@@ -1,7 +1,6 @@
 package com.murad.introtodi
 
 import android.app.Application
-import com.murad.introtodi.di.Injector
 import com.murad.introtodi.data.local.DatabaseService
 import com.murad.introtodi.data.remote.NetworkService
 import com.murad.introtodi.di.components.DaggerApplicationComponent
@@ -15,8 +14,11 @@ class IntroDIApp : Application() {
     @Inject
     lateinit var databaseService:DatabaseService
 
+    val applicationComponent =
+        DaggerApplicationComponent.builder().applicationModule(ApplicationModule()).build()
+
     override fun onCreate() {
         super.onCreate()
-        DaggerApplicationComponent.builder().applicationModule(ApplicationModule()).build().inject(this)
+        applicationComponent.inject(this)
     }
 }
