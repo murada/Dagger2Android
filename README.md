@@ -60,3 +60,27 @@ we created new singleton class(object) -- Injector -- to manage our dependencies
 to start digging in the dagger and DI libraries world.
 this object contains 2 inject methods. the first one will inject the services instances in the application class.
 the second will inject the instances from the application into the viewmodel and inject the viewmodel in the mainactivity.
+
+
+## Dagger2
+
+Dagger Main Architecture:
+
+* Module(A class that provides-create the needed dependencies)
+* Component(Dependency Manager a class will inject the consumers with their dependencies)
+* Consumer (Classes has dependencies -they have fields from another classes-)
+* Scope (The Dependency lifetime)
+
+Main Annotations:
+
+* @Module
+* @Component
+* @Provides
+* @Inject
+
+In the first commit we removed the inject(for the application) method from the injector class and we used the dagger2 to inject the services 
+into the application.
+
+We created Application module(@Module) that will provide 2 (@Singleton) services (Network , Database).
+
+----------------------------------------

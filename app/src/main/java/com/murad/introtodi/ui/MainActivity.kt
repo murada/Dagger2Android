@@ -3,8 +3,7 @@ package com.murad.introtodi.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.murad.introtodi.DI.Injector
-import com.murad.introtodi.IntroDIApp
+import com.murad.introtodi.di.Injector
 import com.murad.introtodi.R
 
 class MainActivity : AppCompatActivity() {

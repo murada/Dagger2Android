@@ -6,8 +6,8 @@ import com.murad.introtodi.data.remote.NetworkService
 
 class MainViewModel {
 
-    private var databaseService: DatabaseService? = null
-    private var networkService: NetworkService? = null
+    public var databaseService: DatabaseService? = null
+    public var networkService: NetworkService? = null
 
     constructor(databaseService: DatabaseService?, networkService: NetworkService?) {
         this.databaseService = databaseService
