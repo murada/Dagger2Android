@@ -91,4 +91,11 @@ from application module).
 
 in the first and second commit we used (Method injection using @provides). next we will use Constructor injection.
 
+
+### Dagger2 third commit
+
+we used the constructor injection. we removed provides methods for the services and viewmodel and created new provides for
+the fields needed in both services. and since the apiKey and DatabaseName both strings we created
+new Qualifiers so dagger can inject each property with it's method. 
+
 ----------------------------------------

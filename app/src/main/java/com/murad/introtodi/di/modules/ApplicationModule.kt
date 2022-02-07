@@ -2,6 +2,8 @@ package com.murad.introtodi.di.modules
 
 import com.murad.introtodi.data.local.DatabaseService
 import com.murad.introtodi.data.remote.NetworkService
+import com.murad.introtodi.di.qualifier.DatabaseInfo
+import com.murad.introtodi.di.qualifier.NetworkInfo
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -9,17 +11,22 @@ import javax.inject.Singleton
 @Module
 class ApplicationModule() {
 
-
-    @Singleton
     @Provides
-    fun provideNetworkService():NetworkService {
-      return NetworkService("APIKey")
+    @NetworkInfo
+    fun provideApiKey():String{
+        return "ApiKey"
     }
 
-    @Singleton
     @Provides
-    fun provideDataBaseService():DatabaseService {
-        return DatabaseService("database",3)
+    @DatabaseInfo
+    fun provideDatabaseName():String{
+        return "database"
     }
+
+    @Provides
+    fun provideDatabaseVersion():Int{
+        return 3
+    }
+
 
 }

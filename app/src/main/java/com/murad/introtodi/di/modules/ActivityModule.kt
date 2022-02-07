@@ -10,9 +10,4 @@ import dagger.Provides
 @Module
 class ActivityModule {
 
-    @Provides
-    fun provideViewModel(databaseService: DatabaseService , networkService: NetworkService):MainViewModel{
-        return MainViewModel(databaseService , networkService)
-    }
-
 }
