@@ -89,6 +89,6 @@ In the second commit we removed the Injector object and we used dagger2 to injec
 (Note : we added dependency in the activity component because the view model needs (network and database)services and they already been provided
 from application module).
 
-in the first and second commit we used (Field Injection). next we will use Constructor injection.
+in the first and second commit we used (Method injection using @provides). next we will use Constructor injection.
 
 ----------------------------------------
